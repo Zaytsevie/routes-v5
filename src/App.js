@@ -10,14 +10,14 @@ import {
 
 function App() {
     return (
-        <div className='App'>
+        <div className="App">
             <BrowserRouter>
                 <h1> App Layout</h1>
-                <NavLink to='/users'>Users list Page</NavLink>
+                <NavLink to="/users">Users list Page</NavLink>
                 <Switch>
-                    <Route path='/users' component={UsersLayout} />
-                    <Route path='/' component={MainPage} />
-                    <Redirect to='/' />
+                    <Route path="/users" component={UsersLayout} />
+                    <Route path="/" component={MainPage} />
+                    <Redirect to="/" />
                 </Switch>
             </BrowserRouter>
         </div>
@@ -31,7 +31,7 @@ function UsersLayout() {
     return (
         <div>
             <h1>Users Layout</h1>
-            <NavLink to='/'>Main Page</NavLink>
+            <NavLink to="/">Main Page</NavLink>
             <Switch>
                 <Route
                     path={path + "/:userId/profile"}
@@ -69,7 +69,7 @@ function UserProfilePage() {
             <h1>UserPage</h1>
             <ul>
                 <li>
-                    <NavLink to='/users'>Users List page</NavLink>
+                    <NavLink to="/users">Users List page</NavLink>
                 </li>
                 <li>
                     <NavLink to={`/users/${userId}/edit`}>
